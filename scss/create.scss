@@ -1,0 +1,135 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+
+h4 {
+  text-align: left;
+  position: relative;
+
+  span {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    display: inline-block;
+    border: 1px solid rgba(39, 40, 34, .20);
+    color: rgba(39, 40, 34, .50);
+    padding: 4px;
+    @include border-radius(3px);
+  }
+  border-bottom: 3px solid rgba(39, 40, 34, .2);
+  padding-bottom: 10px;
+}
+
+.row {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+
+  + .row {
+    margin-top: 15px;
+  }
+
+  > * {
+  }
+  .title {
+    float: left;
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 2px;
+  }
+  .val {
+    float: left;
+    display: inline-block;
+    width: calc(100% - 150px);
+    padding-left: 10px;
+    text-align: left;
+
+    input {
+      @include input;
+      width: 650px;
+    }
+    select {
+      border: 1px solid rgba(202, 202, 200, 1.00);
+      width: 650px;
+      height: 31px;
+      font-size: 15px;
+    }
+  }
+}
+.editer {
+  @include textarea;
+  width: 650px;
+  height: 300px;
+  padding: 0;
+  >div {
+    background-color: rgba(248, 248, 248, 1.00);
+    border-bottom: 1px solid rgba(202, 202, 200, 1.00);
+    height: 33px;
+  }
+  textarea {
+    @include textarea;
+    width: 100%;
+    height: calc(100% - 33px);
+    border: 0;
+    border-radius: 0;
+
+    &:focus {
+      border: 0;
+      @include box-shadow(none);
+    }
+  }
+}
+.tags {
+  height: 80px;
+  textarea {
+    height: 100%;
+  }
+}
+.btn {
+  border-top: 3px solid rgba(39, 40, 34, .10);
+  margin-top: 25px;
+  text-align: right;
+
+  > * {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(240, 173, 78, 1.00);
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-right: 10px;
+    @include border-radius(3px);
+    text-align: center;
+    text-decoration: none;
+  }
+}
+#img {
+  display: inline-block;
+  width: 650px;
+  height: 100px;
+  margin-bottom: 15px;
+
+  background-color: rgba(245, 245, 245, 1.00);
+  @include border-radius(3px);
+  + * {
+    border: 0;
+
+    display: block;
+    width: 140px;
+    padding: 10px 20px;
+    background-color: rgba(240, 173, 78, 1.00);
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    @include border-radius(3px);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

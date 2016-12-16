@@ -1,0 +1,76 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+
+h4 {
+  text-align: left;
+  position: relative;
+  a {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    display: inline-block;
+    border: 1px solid rgba(39, 40, 34, .20);
+    color: rgba(39, 40, 34, .50);
+    padding: 4px;
+    text-decoration: none;
+    @include border-radius(3px);
+  }
+}
+.row {
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  @include clearfix();
+  background-color: white;
+
+  &.n1 {
+    background-color: rgba(249, 249, 249, 1.00);
+  }
+  &.f {
+    border-bottom: 1px solid rgba(221, 221, 221, 1.00);
+    font-weight: bolder;
+  }
+  &:not(.f) {
+    border-top: 1px solid rgba(221, 221, 221, 1.00);
+  }
+  &.c {
+    padding-left: 30px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+
+      display: inline-block;
+      content: "\e900";
+      font-family: 'icomoon', Monaco, "微軟正黑體", "Microsoft JhengHei";
+    }
+  }
+  > span {
+    display: inline-block;
+    float: left;
+    padding: 4px;
+
+    &:nth-child(1) {
+      width: calc(100% - 250px);
+      text-align: left;
+    }
+    &:nth-child(2) {
+      width: 250px;
+      text-align: right;
+      span {
+        margin: 0 3px;
+        @include a;
+      }
+    }
+    .icon-plus {
+      cursor: pointer;
+    }
+  }
+}

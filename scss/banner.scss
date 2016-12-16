@@ -1,0 +1,34 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+h4 {
+  text-align: left;
+}
+#img {
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(245, 245, 245, 1.00);
+}
+
+#btn {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  margin-top: 25px;
+
+  > * {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    background-color: rgba(240, 173, 78, 1.00);
+    color: rgba(255, 255, 255, 1.00);
+    text-align: center;
+    font-weight: bold;
+    @include border-radius(3px);
+  }
+}

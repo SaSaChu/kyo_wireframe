@@ -1,0 +1,85 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+#login {
+  display: inline-block;
+  width: 350px;
+  height: 250px;
+  margin-top: 300px;
+}
+
+#info {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  @include clearfix();
+  > * {
+    height: 50px;
+    line-height: 50px;
+  }
+}
+#logo {
+  float: left;
+  width: 50px;
+  display: inline-block;
+  background-color: rgba(39, 40, 34, .40);
+}
+#title {
+  float: left;
+  display: inline-block;
+  width: calc(100% - 50px);
+  padding-left: 10px;
+  text-align: left;
+}
+.row {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  @include clearfix();
+
+  > * {
+    border: 1px solid rgba(206, 206, 206, 1.00);
+    height: 40px;
+    line-height: 40px - 2px;
+    text-align: left;
+
+  }
+  .icon {
+    float: left;
+    display: inline-block;
+    width: 40px;
+    background-color: rgba(224, 224, 224, 1.00);
+  }
+  .input {
+    display: inline-block;
+    float: left;
+    width: calc(100% - 40px);
+    padding-left: 10px;
+    color: rgba(224, 224, 224, 1.00);
+    font-size: 14px;
+    border-left: 0;
+  }
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  text-align: right;
+
+  > * {
+    display: inline-block;
+    width: 100px;
+    background-color: rgba(91, 192, 222, 1.00);
+    height: 40px;
+    line-height: 40px - 2px;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1.00);
+    text-decoration: none;
+    @include border-radius(3px);
+  }
+}
